@@ -41,6 +41,7 @@ let questions = [
     },
 ];
 
+let rightQuestions = 0;
 let currentQuestion = 0;
 
 
@@ -55,6 +56,11 @@ function showQuestion() {
 
     if (currentQuestion >= questions.length) {
         //Show Endscreen
+        document.getElementById('endScreen').style = '';
+        document.getElementById('questionBody').style = 'display: none';
+        document.getElementById('amountOfQuestions').innerHTML = questions.length;
+        document.getElementById('amountOfRightQuestions').innerHTML = rightQuestions;
+        document.getElementById('headerImage').src = './img/tropy.png';
     } else {
         let question = questions[currentQuestion];
 
@@ -75,6 +81,7 @@ function answer(selection) {
 
     if (selectedQuestionNumber == question['right_answer']) {
         document.getElementById(selection).parentNode.classList.add('bg-success');
+        rightQuestions++;
     } else {
         document.getElementById(selection).parentNode.classList.add('bg-danger');
         document.getElementById(idOfRightAnswer).parentNode.classList.add('bg-success');

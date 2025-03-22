@@ -27,8 +27,24 @@
     <div class="container">
 
         <div class="card quizCard">
-            <img src="./img/pencil.jpg" class="card-img-top">
-            <div class="card-body">
+            <img src="./img/pencil.jpg" id="headerImage" class="card-img-top">
+
+            <div class="card-body" id="endScreen" style="display: none;">
+                <div class="textCenter">
+                    Quiz beendet!
+                </div>
+
+                <!-- <div>
+                    <img class="width-100" src="./img/tropy.png" alt="Trophy Image">
+                </div> -->
+
+                <div class="textCenter">
+                    Du hast <b id="amountOfRightQuestions">XXX</b> Fragen von <b id="amountOfQuestions">XXX</b> richtig beantwortet.
+                </div>
+            </div>
+
+
+            <div class="card-body" id="questionBody">
                 <h5 class="card-title" id="questionText">Frage</h5>
 
                 <div class="card quizAnswerCard mb-2" onclick="answer('answer_1')">
@@ -63,7 +79,8 @@
                         <b id="questionNumber">1</b> von <b id="allQuestions">5</b> Fragen
                     </span>
 
-                    <button onclick="nextQuestion()" class="btn btn-primary" id="nextButton" disabled>Nächste Frage</button>
+                    <button onclick="nextQuestion()" class="btn btn-primary" id="nextButton" disabled>Nächste
+                        Frage</button>
                 </div>
 
             </div>
