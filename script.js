@@ -62,6 +62,12 @@ function showQuestion() {
         document.getElementById('amountOfRightQuestions').innerHTML = rightQuestions;
         document.getElementById('headerImage').src = './img/tropy.png';
     } else {
+
+        let percent = (currentQuestion + 1) / questions.length;
+        percent = Math.round(percent * 100);
+        document.getElementById('progressBar').innerHTML = `${percent} %`;
+        document.getElementById('progressBar').style = `width: ${percent}%;`;
+
         let question = questions[currentQuestion];
 
         document.getElementById('questionNumber').innerHTML = currentQuestion + 1;
