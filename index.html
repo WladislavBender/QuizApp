@@ -31,7 +31,7 @@
 
             <div class="progress">
                 <div class="progress-bar" id="progressBar" role="progressbar" style="width: 0%;">25%</div>
-              </div>
+            </div>
 
             <div class="card-body" id="endScreen" style="display: none;">
                 <div class="textCenter">
@@ -43,8 +43,16 @@
                 </div> -->
 
                 <div class="textCenter">
-                    Du hast <b id="amountOfRightQuestions">XXX</b> Fragen von <b id="amountOfQuestions">XXX</b> richtig beantwortet.
+                    Du hast <b id="amountOfRightQuestions">XXX</b> Fragen von <b id="amountOfQuestions">XXX</b> richtig
+                    beantwortet.
                 </div>
+
+                <div class="buttonRow">
+                    <button onclick="restartGame()" class="btn btn-primary">Erneut spielen</button>
+                </div>
+
+
+
             </div>
 
 
@@ -83,8 +91,8 @@
                         <b id="questionNumber">1</b> von <b id="allQuestions">5</b> Fragen
                     </span>
 
-                    <button onclick="nextQuestion()" class="btn btn-primary" id="nextButton" disabled>Nächste
-                        Frage</button>
+                    <button onclick="nextQuestion()" class="btn btn-primary" id="nextButton"
+                        disabled>NächsteFrage</button>
                 </div>
 
             </div>
