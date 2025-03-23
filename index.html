@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QuizApp</title>
+    <link rel="icon" type="image/x-icon" href="./img/quiz.png">
 
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
@@ -38,10 +39,6 @@
                     Quiz beendet!
                 </div>
 
-                <!-- <div>
-                    <img class="width-100" src="./img/tropy.png" alt="Trophy Image">
-                </div> -->
-
                 <div class="textCenter">
                     Du hast <b id="amountOfRightQuestions">XXX</b> Fragen von <b id="amountOfQuestions">XXX</b> richtig
                     beantwortet.
@@ -50,11 +47,7 @@
                 <div class="buttonRow">
                     <button onclick="restartGame()" class="btn btn-primary">Erneut spielen</button>
                 </div>
-
-
-
             </div>
-
 
             <div class="card-body" id="questionBody">
                 <h5 class="card-title" id="questionText">Frage</h5>
@@ -65,20 +58,17 @@
                     </div>
                 </div>
 
-
                 <div class="card quizAnswerCard mb-2" onclick="answer('answer_2')">
                     <div class="card-body" id="answer_2">
                         Antwort
                     </div>
                 </div>
 
-
                 <div class="card quizAnswerCard mb-2" onclick="answer('answer_3')">
                     <div class="card-body" id="answer_3">
                         Antwort
                     </div>
                 </div>
-
 
                 <div class="card quizAnswerCard mb-2" onclick="answer('answer_4')">
                     <div class="card-body" id="answer_4">
@@ -94,12 +84,9 @@
                     <button onclick="nextQuestion()" class="btn btn-primary" id="nextButton"
                         disabled>NächsteFrage</button>
                 </div>
-
             </div>
         </div>
-
     </div>
-
 </body>
 
 </html>

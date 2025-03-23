@@ -94,7 +94,7 @@ function answer(selection) {
     let selectedQuestionNumber = selection.slice(-1);
     let idOfRightAnswer = `answer_${question['right_answer']}`;
 
-    if (rightAnswerSelected(selectedQuestionNumber)) {
+    if (rightAnswerSelected(selectedQuestionNumber, question)) {
         document.getElementById(selection).parentNode.classList.add('bg-success');
         AUDIO_SUCCESS.play();
         rightQuestions++;
@@ -106,8 +106,8 @@ function answer(selection) {
     document.getElementById('nextButton').disabled = false;
 }
 
-function rightAnswerSelected(selectedQuestionNumber) {
-    selectedQuestionNumber == question['right_answer'];
+function rightAnswerSelected(selectedQuestionNumber, question) {
+    return selectedQuestionNumber == question['right_answer'];
 }
 
 function nextQuestion() {
